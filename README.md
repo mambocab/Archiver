@@ -67,12 +67,16 @@ The directory structure of Directory Structures is as follows
 ```
 
 
+
 ###Setting up the Archiver to run locally
 * `mv group_vars/archiver.example group_vars/archiver`
 * Fill out archiver with the proper information
     - Minimally your S3 keys and bucket name
+* requirements:
+    - vagrant: `brew cask install vagrant` or `vagrantup.com`
+    - virtualbox (for use by vagrant): `brew cask install virtualbox` or `virtualbox.org`
 
-1. Change directorys to vagrant
+1. `cd vagrant`
 2. `vagrant up`
 3. `invoke provision`
 4. `cd ..`
@@ -81,3 +85,5 @@ The directory structure of Directory Structures is as follows
 7. Fill out the cell defining `container` and run the notebook
 8. ???
 9. profit
+
+To read the logs from 

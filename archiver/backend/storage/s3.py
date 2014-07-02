@@ -40,7 +40,7 @@ class S3(StorageBackEnd):
 
     def upload_file(self, path, name, directory='', retries=0):
         if name[0] == '/':
-            name = os.path.join(directory, name[1:])
+            name = os.path.join(directory, name[1:].encode("utf-8"))
         else:
             name = os.path.join(directory, name)
 

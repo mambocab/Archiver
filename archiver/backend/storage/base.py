@@ -44,7 +44,7 @@ class StorageBackEnd(object):
         fd, path = tempfile.mkstemp()
         with os.fdopen(fd, 'w') as json_file:
             json_file.write(json.dumps(blob))
-        return self.upload_file(path, '{}.json'.format(name), directory=directory)
+        return self.upload_file(path, u'{}.json'.format(name), directory=directory)
 
     def push_manifest(self, blob, name):
         self.push_json(blob, '{}.manifest'.format(name), directory=settings.MANIFEST_DIR)
