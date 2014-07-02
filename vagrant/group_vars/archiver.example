@@ -8,9 +8,9 @@ rabbitmq_users_definitions:
     tags:
     - administrator
 
-s3_access_key: CHANGE ME
-s3_secret_key: CHANGE ME
-s3_bucket: CHANGE ME
+ACCESS_KEY: CHANGE ME
+SECRET_KEY: CHANGE ME
+BUCKET_NAME: CHANGE ME
 
 figshare_client_id: CHANG ME
 figshare_client_secret: CHANGE ME
