@@ -42,7 +42,7 @@ class S3(StorageBackEnd):
         if name[0] == '/':
             name = os.path.join(directory, name[1:].encode("utf-8"))
         else:
-            name = os.path.join(directory, name)
+            name = os.path.join(directory, name.encode("utf-8"))
 
         try:
             if not self.bucket.get_key(name):
