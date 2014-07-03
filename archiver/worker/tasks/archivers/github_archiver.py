@@ -91,7 +91,7 @@ def clone_github(github):
     rets = []
 
     for root, dirs, files in os.walk(path):
-        dirs[:] = [d for d in dirs if not d[0] == '.']
+        dirs = [d for d in dirs if not d[0] == '.']
         rets.extend([
             process_file(github, os.path.join(root, f),
                          os.path.join(root, f).replace('%s/' % path, ''))
